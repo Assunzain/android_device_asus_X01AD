@@ -183,3 +183,8 @@ persist.asus.led.on=1
 
 # BPF
 ro.kernel.ebpf.supported=true
+
+# Ims
+persist.dbg.ims_volte_enable=1
+
+##
