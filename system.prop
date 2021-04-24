@@ -125,3 +125,8 @@ persist.timed.enable=true
 
 # WFD
 persist.debug.wfd.enable=1
+
+# Ims
+persist.dbg.ims_volte_enable=1
+
+##
