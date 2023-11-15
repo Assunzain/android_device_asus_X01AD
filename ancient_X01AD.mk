@@ -30,6 +30,9 @@ TARGET_BOOT_ANIMATION_RES := 720
 TARGET_FACE_UNLOCK_SUPPORTED := true
 IS_PHONE := true
 
+# set viper4fx
+$(call inherit-product, vendor/v4afx/config.mk)
+
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
