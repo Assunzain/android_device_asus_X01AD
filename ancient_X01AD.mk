@@ -24,7 +24,7 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 # Inherit some common AncientOS stuff.
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 ANCIENT_OFFICIAL := false
-ANCIENT_GAPPS := true
+ANCIENT_GAPPS := false
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_FACE_UNLOCK_SUPPORTED := true
