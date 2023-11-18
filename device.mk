@@ -17,12 +17,13 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/asus/X01AD/X01AD-vendor.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Disable APEX compression
 # Keep this after including updatable_apex.mk
 PRODUCT_COMPRESSED_APEX := false
+
+# Updatable
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.apex.updatable=false
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
