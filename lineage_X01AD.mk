@@ -22,27 +22,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common DerpFest OS stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
-
-# set viper4fx
-$(call inherit-product, vendor/v4afx/config.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Derp
-DERP_BUILDTYPE := UNOFFICIAL
+# Flags
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_ENABLE_BLUR := true
 
 # Device identifiers.
-PRODUCT_NAME := derp_X01AD
+PRODUCT_NAME := lineage_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
