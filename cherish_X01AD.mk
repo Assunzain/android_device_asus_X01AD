@@ -41,7 +41,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Device identifiers.
-PRODUCT_NAME := Superior_X01AD
+PRODUCT_NAME := cherish_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
