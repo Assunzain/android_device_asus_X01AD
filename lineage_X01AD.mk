@@ -1,4 +1,4 @@
-ada#
+#
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,30 +18,23 @@ ada#
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common SuperiorOS stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
-
-# set viper4fx
-$(call inherit-product, vendor/v4afx/config.mk)
-
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
+
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BUILD_APERTURE_CAMERA := true
 # Stuff
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
-WITH_GAPPS := false
-TARGET_INCLUDE_PIXEL_CHARGER := true
-TARGET_USES_BLUR := true
-MAINTAINER := AssunZain
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Device identifiers.
-PRODUCT_NAME := Superior_X01AD
+PRODUCT_NAME := lineage_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
