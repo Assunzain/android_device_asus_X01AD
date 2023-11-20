@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_X01AD.mk
+    $(LOCAL_DIR)/cherish_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_X01AD-user \
-    superior_X01AD-userdebug \
-    superior_X01AD-eng
+    cherish_X01AD-user \
+    cherish_X01AD-userdebug \
+    cherish_X01AD-eng
