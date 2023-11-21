@@ -57,30 +57,29 @@ void check_device()
 
     sysinfo(&sys);
 
-    if (sys.totalram > 3072ull * 1024 * 1024) {
+    if (sys.totalram > 5072ull * 1024 * 1024) {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.7";
+        heapminfree = "8m";
+        heapmaxfree = "32m";
+    } else if (sys.totalram > 3072ull * 1024 * 1024) {
         // from - phone-xxhdpi-4096-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "256m";
         heapsize = "512m";
         heaptargetutilization = "0.7";
-        heapminfree = "4m";
+        heapminfree = "8m";
         heapmaxfree = "16m";
-    } else if (sys.totalram > 2048ull * 1024 * 1024) {
-        // Set for 3GB RAM
+    } else {
         // from - phone-xhdpi-2048-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "192m";
         heapsize = "512m";
-        heaptargetutilization = "0.7";
-        heapminfree = "4m";
-        heapmaxfree = "8m";
-    } else {
-        // from go_defaults_common.prop
-        heapstartsize = "8m";
-        heapgrowthlimit = "128m";
-        heapsize = "256m";
         heaptargetutilization = "0.75";
-        heapminfree = "2m";
+        heapminfree = "512k";
         heapmaxfree = "8m";
     }
 }
