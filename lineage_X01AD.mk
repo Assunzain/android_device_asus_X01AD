@@ -24,6 +24,10 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+#Face unlock flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+FACE_UNLOCK_SUPPORTED := true
+
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
