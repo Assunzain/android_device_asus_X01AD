@@ -27,6 +27,7 @@ $(call inherit-product, vendor/arrow/config/common.mk)
 #Face unlock flags
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
+DEVICE_MAINTAINER := AssunZain
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
