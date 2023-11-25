@@ -23,7 +23,7 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 
 # RR
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
-RR_BUILDTYPE := AssunZain
+RR_BUILDTYPE := Oppenheimer
 BUILD_RR_WALLPAPERS := true
 TARGET_BOOT_ANIMATION_RES := 720
 #Face unlock flags
