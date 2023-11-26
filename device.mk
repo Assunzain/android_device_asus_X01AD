@@ -26,9 +26,6 @@ PRODUCT_COMPRESSED_APEX := false
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.apex.updatable=false
 
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=4m \
     dalvik.vm.heapstartsize=16m
