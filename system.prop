@@ -258,6 +258,8 @@ persist.radio.add_power_save=1
 ro.ril.fast.dormancy.rule=1
 ro.ril.fast.dormancy.timeout=3
 ro.mot.eri.losalert.delay=1000
+ro.vendor.use_data_netmgrd=true
+ro.vold.umsdirtyratio=20
 
 # Storage.xml moment
 persist.sys.binary_xml=false
