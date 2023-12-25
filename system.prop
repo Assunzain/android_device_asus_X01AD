@@ -175,7 +175,7 @@ persist.vendor.camera.display.lmax=1280x720
 ro.vendor.qti.va_aosp.support=1
 
 #expose aux camera for below packages
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture
 
 persist.asus.led.on=1
 
