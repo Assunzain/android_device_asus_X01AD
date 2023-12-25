@@ -2387,11 +2387,11 @@ vendor/lib64/libqti-iopd-client.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
-# Peripheral manager - from daisy-user-10-QKQ1.191002.002-V11.0.10.0.QDLMIXM-release-keys
-vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
-vendor/bin/pm-service|8a521f14576d0d2edf03b4500a54379d37e15d4e
-vendor/lib/libperipheral_client.so|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
-vendor/lib64/libperipheral_client.so|20c8ab21fe28e41f60b59af0ba72de9f6b1996d2
+# Peripheral manager - from FP3-user-13-6.A.020.0-gms-88126537-release-keys
+-vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
+-vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
+-vendor/lib/libperipheral_client.so|7ace2f7c8c7ebd986db6c7796de7237e584e658b
+-vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing - from daisy-user-10-QKQ1.191002.002-V11.0.10.0.QDLMIXM-release-keys
 vendor/bin/hw/vendor.display.color@1.0-service|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
