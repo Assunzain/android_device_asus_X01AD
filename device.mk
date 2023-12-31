@@ -363,8 +363,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \
     init.device.rc \
+    init.msm.usb.configfs.rc \
     init.power.rc \
     init.qcom.rc \
+    init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
@@ -372,7 +374,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.early_boot.sh \
-    init.qcom.sh
+    init.qcom.sh \
+    init.qcom.usb.sh
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -430,13 +433,6 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
-
-PRODUCT_PACKAGES += \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh
-
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/usb/etc
 
 # Vibrator
 PRODUCT_PACKAGES += \
