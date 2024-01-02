@@ -174,3 +174,6 @@ debug.sf.earlyGl.app.duration=20000000
 
 # Zygote
 zygote.critical_window.minute=10
+debug.sf.predict_hwc_composition_strategy=0
+
+#end
