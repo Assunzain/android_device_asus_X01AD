@@ -441,8 +441,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm \
     ro.soc.model=SDM450
 
-# Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Always preopt extracted APKs to prevent extracting out of the APK for gms
 # modules.
