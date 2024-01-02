@@ -80,6 +80,7 @@ debug.hwui.target_cpu_time_percent=30
 
 # Display
 vendor.display.use_smooth_motion=1
+vendor.display.disable_rotator_downscale=1
 ro.opengles.version=196610
 debug.sf.disable_backpressure=0
 debug.cpurend.vsync=true
