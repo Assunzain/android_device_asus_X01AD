@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_X01AD.mk
+    $(LOCAL_DIR)/cherish_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_X01AD-user \
-    evolution_X01AD-userdebug \
-    evolution_X01AD-eng
+    cherish_X01AD-user \
+    cherish_X01AD-userdebug \
+    cherish_X01AD-eng
