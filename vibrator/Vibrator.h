@@ -11,6 +11,13 @@
 #define VIBRATOR_STATE "/sys/class/leds/vibrator/state"
 #define VIBRATOR_DURATION "/sys/class/leds/vibrator/duration"
 #define VIBRATOR_ACTIVATE "/sys/class/leds/vibrator/activate"
+#define VIBRATOR_INTENSITY "/sys/class/leds/vibrator/vmax_mv"
+
+#define VOLTAGE_MAX 3544
+
+#define AMPLITUDE_LIGHT 0.65
+#define AMPLITUDE_MEDIUM 0.8
+#define AMPLITUDE_STRONG 1
 
 using ::aidl::android::hardware::vibrator::IVibratorCallback;
 using ::aidl::android::hardware::vibrator::Braking;
@@ -54,6 +61,7 @@ public:
     ndk::ScopedAStatus composePwle(const std::vector<PrimitivePwle>& composite, const std::shared_ptr<IVibratorCallback>& callback) override;
 private:
     ndk::ScopedAStatus activate(int32_t timeoutMs);
+    bool mAmplitudeControl;
 };
 
 } // namespace vibrator
