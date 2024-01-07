@@ -24,7 +24,13 @@ static void write(const std::string& path, const T& value) {
     file << value << std::endl;
 }
 
+static bool fileExists(const std::string& path) {
+    std::ifstream file(path);
+    return (file.good());
+}
+
 Vibrator::Vibrator() {
+    mAmplitudeControl = fileExists(VIBRATOR_INTENSITY);
     write(VIBRATOR_STATE, 1);
 }
 
@@ -36,7 +42,11 @@ ndk::ScopedAStatus Vibrator::activate(int32_t timeoutMs) {
 }
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
-    *_aidl_return = IVibrator::CAP_ON_CALLBACK| IVibrator::CAP_PERFORM_CALLBACK;
+    *_aidl_return = IVibrator::CAP_ON_CALLBACK | IVibrator::CAP_PERFORM_CALLBACK;
+
+    if (mAmplitudeControl)
+        *_aidl_return |= IVibrator::CAP_AMPLITUDE_CONTROL;
+
     return ndk::ScopedAStatus::ok();
 }
 
@@ -65,6 +75,23 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs, const std::shared_ptr<IVibrat
 ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength, const std::shared_ptr<IVibratorCallback>& callback, int32_t* _aidl_return) {
     ndk::ScopedAStatus status;
     int32_t timeoutMs;
+    float amplitude;
+
+    switch (strength) {
+        case EffectStrength::LIGHT:
+            amplitude = AMPLITUDE_LIGHT;
+            break;
+        case EffectStrength::MEDIUM:
+            amplitude = AMPLITUDE_MEDIUM;
+            break;
+        case EffectStrength::STRONG:
+            amplitude = AMPLITUDE_STRONG;
+            break;
+        default:
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
+    setAmplitude(amplitude);
 
     switch (effect) {
         case Effect::CLICK:
@@ -108,8 +135,22 @@ ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_retu
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::setAmplitude(float /*amplitude*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
+    int32_t vmax_mv;
+
+    if (amplitude <= 0.0f || amplitude > 1.0f)
+        return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_ILLEGAL_ARGUMENT));
+
+    LOG(DEBUG) << "Setting amplitude: " << amplitude;
+
+    vmax_mv = amplitude * VOLTAGE_MAX;
+
+    LOG(DEBUG) << "Setting vmax_mv: " << vmax_mv;
+
+    if (mAmplitudeControl)
+        write(VIBRATOR_INTENSITY, vmax_mv);
+
+    return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::setExternalControl(bool /*enabled*/) {
