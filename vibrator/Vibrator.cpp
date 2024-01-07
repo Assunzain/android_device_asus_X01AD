@@ -34,7 +34,7 @@ ndk::ScopedAStatus Vibrator::activate(int32_t timeoutMs) {
 }
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
-    *_aidl_return = IVibrator::CAP_ON_CALLBACK;
+    *_aidl_return = IVibrator::CAP_ON_CALLBACK| IVibrator::CAP_PERFORM_CALLBACK;
     return ndk::ScopedAStatus::ok();
 }
 
@@ -48,12 +48,41 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs, const std::shared_ptr<IVibrat
     return status;
 }
 
-ndk::ScopedAStatus Vibrator::perform(Effect /*effect*/, EffectStrength /*strength*/, const std::shared_ptr<IVibratorCallback>& /*callback*/, int32_t* /*_aidl_return*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength, const std::shared_ptr<IVibratorCallback>& callback, int32_t* _aidl_return) {
+    ndk::ScopedAStatus status;
+    int32_t timeoutMs;
+
+    switch (effect) {
+        case Effect::CLICK:
+            timeoutMs = 40;
+            break;
+        case Effect::TICK:
+            timeoutMs = 35;
+            break;
+        case Effect::TEXTURE_TICK:
+            timeoutMs = 30;
+            break;
+        case Effect::THUD:
+        case Effect::POP:
+            timeoutMs = 35;
+            break;
+        case Effect::HEAVY_CLICK:
+            timeoutMs = 50;
+            break;
+        default:
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
+    status = activate(timeoutMs);
+
+    *_aidl_return = timeoutMs;
+    return status;
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* /*_aidl_return*/) {
-    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
+    *_aidl_return = {Effect::CLICK, Effect::HEAVY_CLICK, Effect::TICK,
+                     Effect::TEXTURE_TICK, Effect::THUD, Effect::POP};
+    return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::setAmplitude(float /*amplitude*/) {
