@@ -143,7 +143,7 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
 
     LOG(DEBUG) << "Setting amplitude: " << amplitude;
 
-    vmax_mv = amplitude * VOLTAGE_MAX;
+    vmax_mv = ((int) (amplitude * VOLTAGE_MAX + 7)) & ~7;
 
     LOG(DEBUG) << "Setting vmax_mv: " << vmax_mv;
 
