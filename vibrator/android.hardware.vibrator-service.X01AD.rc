@@ -3,3 +3,6 @@ service vendor.vibrator-default /vendor/bin/hw/android.hardware.vibrator-service
     user system
     group system
     shutdown critical
+
+on early-boot
+    chown system system /sys/class/leds/vibrator/vmax_mv
