@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X01AD.mk
+    $(LOCAL_DIR)/afterlife_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_X01AD-user \
-    lineage_X01AD-userdebug \
-    lineage_X01AD-eng
+    afterlife_X01AD-user \
+    afterlife_X01AD-userdebug \
+    afterlife_X01AD-eng
