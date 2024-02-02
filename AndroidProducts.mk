@@ -15,18 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-<<<<<<< HEAD
-    $(LOCAL_DIR)/derp_X01AD.mk
-
-COMMON_LUNCH_CHOICES := \
-    derp_X01AD-user \
-    derp_X01AD-userdebug \
-    derp_X01AD-eng
-=======
     $(LOCAL_DIR)/evolution_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
    evolution_X01AD-user \
    evolution_X01AD-userdebug \
    evolution_X01AD-eng
->>>>>>> cc9e968 (X01AD: Bringup Evolution)
