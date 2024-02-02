@@ -27,12 +27,6 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Official-ify
-DERP_BUILDTYPE := unofficial
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
 # EvoX Stuff 
 EVO_BUILD_TYPE := UNOFFICIAL
 TARGET_USES_PICO_GAPPS := true
