@@ -21,20 +21,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common DerpFest stuff
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common BlissRoms stuff.
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Official-ify
-DERP_BUILDTYPE := unofficial
+
+
+# Some Build Flags
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+BLISS_BUILDTYPE := UNOFFICIAL
 
 # Device identifiers.
-PRODUCT_NAME := derp_X01AD
+PRODUCT_NAME := bliss_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
