@@ -21,18 +21,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common AlphaDroid stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common BananaDroid stuff
+$(call inherit-product, vendor/banana/config/common.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+# Supported Device Flags. (Features)
+BANANA_BUILD_TYPE := UNOFFICIAL
+BANANA_MAINTAINER := AssunZain
 TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_EXCLUDE_MATLOG := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+WITH_GAPPS := false
 
 # Device identifiers.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := banana_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
