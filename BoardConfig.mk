@@ -43,6 +43,7 @@ BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
 BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0x78af000
 BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true
 BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE :=  2048
@@ -99,6 +100,8 @@ BOARD_USES_COMMON_BLUETOOTH_HAL := true
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+# Set SELinux to permissive mode
+BOARD_SEPOLICY_MODE := permissive
 
 # Display
 TARGET_SCREEN_DENSITY := 280
