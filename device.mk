@@ -24,9 +24,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Keep this after including updatable_apex.mk
 PRODUCT_COMPRESSED_APEX := false
 
-# use pixel charger
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
@@ -190,6 +187,10 @@ PRODUCT_COPY_FILES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     Doze
+
+# Add offline charging
+PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/rro_overlays/charger
 
 # DRM
 PRODUCT_PACKAGES += \
