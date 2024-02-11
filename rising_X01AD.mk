@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common risingOS.
+$(call inherit-product, vendor/rising/config/rising.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
@@ -31,13 +31,21 @@ TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+# RisingOS flags
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := true
+TARGET_ENABLE_PIXEL_FEATURES := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+RISING_MAINTAINER := AssunZain
+RISING_CHIPSET := Snapdragon632
+RISING_STORAGE := 32/64GB
+RISING_RAM := 3/4GB
+RISING_BATTERY := 4000mAh
+RISING_DISPLAY := 720x1520
 
 # Device identifiers.
-PRODUCT_NAME := aosp_X01AD
+PRODUCT_NAME := rising_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
