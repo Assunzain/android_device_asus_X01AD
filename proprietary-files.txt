@@ -2570,6 +2570,7 @@ product/lib64/vendor.qti.ims.callinfo@1.0.so|a752c392c4f2dc03180f41bbe286a9daad9
 product/lib64/vendor.qti.ims.rcsconfig@1.0.so|ba5ffc588422c1b0f3ac8135314db2c88d62671e
 product/lib64/vendor.qti.imsrtpservice@2.0.so|6ef5cd72d34c20e82cb0e58681a4aae9b0dac99a
 product/lib64/vendor.qti.imsrtpservice@2.1.so|6dbe703a5a8389c342008c950aaec7a3a260a055
+-product/priv-app/ims/ims.apk|9c4ca91e0ec7a567d22251d7ca0640abf13fdd7b
 vendor/bin/imsdatadaemon|eeabae78397944fdcbccfb34fa03c8669bf1b0ee
 vendor/bin/imsqmidaemon|5d11ffc3251085f7cc11a925fea803b2ea8a41f6
 vendor/bin/imsrcsd|3a2ab8c9388832ebde08d377335ef5f227801c7b
