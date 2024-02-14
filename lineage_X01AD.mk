@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common Blaze stuff
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
@@ -30,13 +30,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-# Blaze Specific
-BLAZE_BUILD_TYPE := UNOFFICIAL
-BLAZE_MAINTAINER := AssunZain
-WITH_GAPPS := false
+
+# Matrixx
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_MAINTAINER := AssunZain
+MATRIXX_CHIPSET := SDM632
+MATRIXX_BATTERY := 4000mAh
+MATRIXX_DISPLAY := 1520x720
+TARGET_ENABLE_BLUR := true
+WITH_GMS := false
 
 # Device identifiers.
-PRODUCT_NAME := blaze_X01AD
+PRODUCT_NAME := lineage_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
