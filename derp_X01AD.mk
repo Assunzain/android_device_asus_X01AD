@@ -25,9 +25,6 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 # Inherit some common DerpFest OS stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-# set viper4fx
-$(call inherit-product, vendor/v4afx/config.mk)
-
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
