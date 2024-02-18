@@ -36,4 +36,7 @@
     <!-- Set Window transition scale to 50% by default -->
     <fraction name="def_window_transition_scale">50%</fraction>
 
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
+    <string name="def_device_name_simple">Asus ZenFone Max (M2)</string>
+
 </resources>
