@@ -112,6 +112,7 @@ ro.lmk.downgrade_pressure=60
 ro.lmk.kill_heaviest_task=false
 ro.statsd.enable=false
 ro.hwui.render_ahead=10
+bluetooth.device.default_name=Asus ZenFone Max (M2)
 
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
