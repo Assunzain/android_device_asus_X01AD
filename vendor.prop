@@ -142,6 +142,7 @@ ro.lmk.downgrade_pressure=60
 ro.lmk.kill_heaviest_task=false
 ro.statsd.enable=false
 ro.hwui.render_ahead=10
+bluetooth.device.default_name=Asus ZenFone Max (M2)
 
 # Radio
 persist.radio.multisim.config=dsds
