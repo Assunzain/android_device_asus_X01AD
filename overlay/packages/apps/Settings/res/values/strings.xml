@@ -12,8 +12,8 @@
 -->
 
 <resources>
-    <string name="maintainer_git_username">Assunzain</string>
+   <string name="maintainer_git_username">Assunzain</string>
     <string name="maintainer_tele_username">AssunZain</string>
-    <string name="maintainer_ig_username">nol</string>
+    <string name="maintainer_ig_username">assunzain.01</string>
     <string name="maintainer_fb_username">azep.s.zain</string>
 </resources>
