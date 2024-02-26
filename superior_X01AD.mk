@@ -22,7 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common Lineage stuff.
 # Inherit some common Superior stuff.
 $(call inherit-product, vendor/superior/config/common.mk)
 
@@ -35,13 +34,14 @@ TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
-
+TARGET_USE_GOOGLE_TELEPHONY := true
 # Superior Ify
 SUPERIOR_OFFICIAL := false
 MAINTAINER := AssunZain
+SUPERIOR_MAINTAINER := AssunZain
 
 # Device identifiers.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := superior_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
