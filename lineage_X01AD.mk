@@ -38,7 +38,7 @@ MATRIXX_CHIPSET := SDM632
 MATRIXX_BATTERY := 4000mAh
 MATRIXX_DISPLAY := 1520x720
 TARGET_ENABLE_BLUR := true
-WITH_GMS := false
+WITH_GMS := true
 
 # Device identifiers.
 PRODUCT_NAME := lineage_X01AD
@@ -54,7 +54,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=X01A_1
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cheetah-user 13 TQ3A.230705.001.A1 10217028 release-keys"
+    PRIVATE_BUILD_DESC="cheetah_beta-user 14 AP21.240119.009 11395453 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := google/cheetah/cheetah:13/TQ3A.230805.001/10316531:user/release-keys
+BUILD_FINGERPRINT := google/cheetah_beta/cheetah:14/AP21.240119.009/11395453:user/release-keys
