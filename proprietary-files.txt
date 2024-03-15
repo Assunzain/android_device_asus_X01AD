@@ -24,6 +24,18 @@ vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 
+# Add missing lib drm and libspl
+vendor/lib64/libspl.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib/libsecureui.so
+vendor/lib/libStDrvInt.so
+vendor/lib/libsecureui_svcsock.so
+
+# Protobuf - from redfin - TQ3A.230901.001/10750268
+vendor/lib64/libprotobuf-cpp-lite-3.9.1.so|4f4ad5b013daabbbfbf7be7419fb60c28a59c36c
+
 # ANT
 -lib/libantradio.so
 -lib64/libantradio.so
