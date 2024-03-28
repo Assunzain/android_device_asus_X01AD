@@ -36,6 +36,9 @@ vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 
+#add deepsleep
+pm.sleep_mode=1
+
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.device.default_name=Asus ZenFone Max (M2)
