@@ -432,10 +432,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
-
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh
@@ -448,9 +444,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.X01AD
 
 # Wifi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service.legacy
-
 PRODUCT_PACKAGES += \
     libcld80211 \
     libwifi-hal-qcom \
