@@ -252,10 +252,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcrypto
 
-# VNDK
-PRODUCT_PACKAGES += \
-    libcrypto-v33
-
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
