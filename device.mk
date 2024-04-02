@@ -88,6 +88,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# doze
+PRODUCT_PACKAGES += \
+      Doze
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
