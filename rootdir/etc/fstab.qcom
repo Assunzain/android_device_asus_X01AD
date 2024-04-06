@@ -51,4 +51,3 @@
 
 # ZRAM
 /dev/block/zram0                                                     none                    swap    defaults                                                                                        zramsize=75%
-/dev/block/by-name/oem                                    /metadata          ext4           nosuid,nodev,noatime,discard         wait,check,formattable,first_stage_mount
