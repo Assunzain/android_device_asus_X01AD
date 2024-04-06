@@ -21,6 +21,10 @@ $(call inherit-product, vendor/asus/X01AD/X01AD-vendor.mk)
 # Keep this after including updatable_apex.mk
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # use pixel charger
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
