@@ -36,7 +36,7 @@ import androidx.preference.SwitchPreferenceCompat;
 import com.android.settingslib.widget.MainSwitchPreference;
 
 public class DozeSettingsFragment extends PreferenceFragment implements
-        implements.OnPreferenceChangeListener, OnCheckedChangeListener {
+        Preference.OnPreferenceChangeListener, OnCheckedChangeListener {
 
     private MainSwitchPreference mSwitchBar;
 
