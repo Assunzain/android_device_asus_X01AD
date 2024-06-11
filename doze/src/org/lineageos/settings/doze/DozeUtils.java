@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2018,2021 The LineageOS Project
+ *               2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,25 +23,27 @@ import android.content.pm.PackageManager;
 import android.os.PowerManager;
 import android.os.SystemClock;
 import android.os.UserHandle;
+import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
 
-import androidx.preference.PreferenceManager;
-
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 
-public final class Utils {
+public final class DozeUtils {
 
-    protected static final String WAKE_ON_GESTURE_KEY = "wake_on_gesture";
-    protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
-    protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
-    protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
-    protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
     private static final String TAG = "DozeUtils";
     private static final boolean DEBUG = false;
+
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
     protected static final String DOZE_ENABLE = "doze_enable";
+
+    protected static final String WAKE_ON_GESTURE_KEY = "wake_on_gesture";
+    protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
+
+    protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
+    protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
+    protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
 
     protected static void startService(Context context) {
         if (DEBUG) Log.d(TAG, "Starting service");

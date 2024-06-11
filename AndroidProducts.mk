@@ -20,4 +20,7 @@ PRODUCT_MAKEFILES := \
 COMMON_LUNCH_CHOICES := \
     lineage_X01AD-user \
     lineage_X01AD-userdebug \
-    lineage_X01AD-eng
+    lineage_X01AD-eng \
+    lineage_X01AD-ap1a-userdebug \
+    lineage_X01AD-ap1a-eng \
+    lineage_X01AD-ap1a-user

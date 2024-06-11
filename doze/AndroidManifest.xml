@@ -17,11 +17,11 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.lineageos.settings.doze"
-    android:sharedUserId="android.uid.system"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0"
+    android:sharedUserId="android.uid.system">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
@@ -31,7 +31,7 @@
         android:persistent="true">
 
         <receiver android:name=".BootCompletedReceiver"
-            android:exported="false">
+                  android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -40,7 +40,7 @@
 
         <service
             android:name=".DozeService"
-            android:permission="DozeService"
+            android:permission="AsusDozeService"
             android:exported="true">
         </service>
 
