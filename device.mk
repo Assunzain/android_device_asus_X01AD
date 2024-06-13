@@ -17,9 +17,6 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/asus/X01AD/X01AD-vendor.mk)
 
-# Inherit from special access with sign
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.oem_unlock_supported=1
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
