@@ -82,34 +82,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-
-   <hal format="aidl" optional="true">
-        <name>android.hardware.radio.data</name>
-        <fqname>IRadioData/slot1</fqname>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.messaging</name>
-        <fqname>IRadioMessaging/slot1</fqname>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.modem</name>
-        <fqname>IRadioModem/slot1</fqname>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.network</name>
-        <fqname>IRadioNetwork/slot1</fqname>
-    </ha>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.sim</name>
-        <fqname>IRadioSim/slot1</fqname>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.voice</name>
-        <fqname>IRadioVoice/slot1</fqname>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.ims</name>
-        <fqname>IRadioIms/slot1</fqname>
-    </hal>    
 </compatibility-matrix>
 
