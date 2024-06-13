@@ -71,6 +71,18 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.voice-V1-ndk.vendor \
     android.hardware.radio.ims-V1-ndk.vendor
 
+PRODUCT_SHIPPING_API_LEVEL := 28
+
+BOARD_SHIPPING_API_LEVEL := 28
+
+BOARD_API_LEVEL := 28
+
+PRODUCT_PACKAGES += $(PRODUCT_PACKAGES_SHIPPING_API_LEVEL_28)
+
+TARGET_BOARD_SUFFIX := _64
+
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
