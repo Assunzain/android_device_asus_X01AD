@@ -17,7 +17,8 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.X01AD",
     proprietary: true,
-    init_rc: ["android.hardware.light@2.0-service.X01AD.rc"],
+    init_rc: ["android.hardware.light@2.0-service.X01AD.rc"], 
+    vintf_fragments: ["android.hardware.light@2.0-service.X01AD.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",
