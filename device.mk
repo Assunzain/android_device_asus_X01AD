@@ -133,6 +133,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.subscription.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.subscription.xml \
     frameworks/native/data/etc/android.hardware.thread_network.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.thread_network.xml
 
+
+# Shims
+PRODUCT_PACKAGES += \
+    libui_shim.vendor
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
