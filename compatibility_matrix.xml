@@ -82,5 +82,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+      <hal format="hidl" optional="false">
+        <name>android.hardware.radio.data</name>
+         <version>1.0</version>
+        <interface>
+            <name>IRadioData</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
 
