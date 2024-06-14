@@ -135,6 +135,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libui_shim.vendor
 
+
+# vndservicemanager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
