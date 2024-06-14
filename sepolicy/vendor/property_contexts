@@ -10,6 +10,11 @@ persist.camera.CDS         u:object_r:camera_prop:s0
 persist.camera.gyro.android u:object_r:camera_prop:s0
 persist.camera.is_type     u:object_r:camera_prop:s0
 
+# Wifi
+vendor.wlan.                   u:object_r:vendor_wifi_config:s0
+persist.sys.dynamic.nv         u:object_r:vendor_wifi_config:s0
+persist.vendor.wlan            u:object_r:vendor_wifi_config:s0
+
 # Fingerprint
 persist.cdfinger.ready     u:object_r:vendor_fingerprint_prop:s0
 property.cdfinger.enablesave u:object_r:vendor_fingerprint_prop:s0
