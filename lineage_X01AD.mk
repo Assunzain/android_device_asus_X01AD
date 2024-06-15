@@ -26,6 +26,24 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 -include vendor/lineage-priv/keys/keys.mk
 
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
+
+# Matrixx
+MATRIXX_BUILD_TYPE := OFFICIAL
+MATRIXX_MAINTAINER := AssunZain
+MATRIXX_CHIPSET := SDM632
+MATRIXX_BATTERY := 4000mAh
+MATRIXX_DISPLAY := 1520x720
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
