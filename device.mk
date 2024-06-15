@@ -200,6 +200,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libgui_shim \
     libstdc++_vendor
+    
+ PRODUCT_PACKAGES += \
+    libgui_vendor
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
