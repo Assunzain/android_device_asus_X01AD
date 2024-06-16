@@ -29,21 +29,12 @@ ifeq ($(TARGET_DEVICE),X01AD)
 
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   
-LIBGUI_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libgui.so
+LIBGUI_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libgui.so, $(TARGET_OUT_VENDOR)/lib/libgui.so
 $(LIBGUI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "libgui.so link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /vendor/lib64/libgui_vendor.so $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(LIBGUI_SYMLINK)
-
-LIBGUI_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libgui.so
-$(LIBGUI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "libgui.so link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /vendor/lib/libgui_vendor.so $@
+	$(hide) ln -sf /vendor/lib64/libgui_vendor.so $@, /vendor/lib/libgui_vendor.so $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(LIBGUI_SYMLINK)
 
