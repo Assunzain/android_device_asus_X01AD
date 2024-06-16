@@ -350,6 +350,11 @@ on post-fs-data
     copy /vendor/radio/qcril_database/qcril.db /data/vendor/radio/qcril_prebuilt.db
     chown radio radio /data/vendor/radio/qcril_prebuilt.db
     chmod 0660 /data/vendor/radio/qcril_prebuilt.db
+    copy /vendor/radio/qcril_database/qcrilNr.db /data/vendor/radio/qcrilNr_prebuilt.db
+    copy /vendor/etc/qcril_database/qcrilNr.db /data/vendor/radio/qcrilNr_prebuilt.db
+    chown radio radio /data/vendor/radio/qcrilNr_prebuilt.db
+    chmod 0660 /data/vendor/radio/qcrilNr_prebuilt.db
+    
     # File flags for prebuilt ril db file
     write /data/vendor/radio/prebuilt_db_support 1
     chown radio radio /data/vendor/radio/prebuilt_db_support
@@ -626,3 +631,17 @@ on property:vendor.opengles.version=*
 # Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
+    
+on property:persist.vendor.radio.multisim.config=dsds
+    setprop persist.radio.multisim.config dsds
+    setprop ro.telephony.default_network "9,1"
+    enable vendor.qcrild
+    enable vendor.qcrild2
+
+on property:persist.vendor.radio.multisim.config=ss
+    setprop ro.telephony.default_network 9
+    enable vendor.qcrild
+
+on property:persist.vendor.data.mode=concurrent
+    enable vendor.dataqti
+    enable vendor.dataadpl

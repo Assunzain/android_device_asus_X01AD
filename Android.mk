@@ -38,6 +38,23 @@ $(LIBGUI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(LIBGUI_SYMLINK)
 
+IBQDMETADATA_SYS_LIB := libqdMetaData.system.so
+LIBQDMETADATA_32_SYMLINK := $(TARGET_OUT_SYSTEM_EXT)/lib/libqdMetaData.so
+$(LIBQDMETADATA_32_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "libqdMetaData 32 lib symlink: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf $(LIBQDMETADATA_SYS_LIB) $@
+
+LIBQDMETADATA_64_SYMLINK := $(TARGET_OUT_SYSTEM_EXT)/lib64/libqdMetaData.so
+$(LIBQDMETADATA_64_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "libqdMetaData 64 lib symlink: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf $(LIBQDMETADATA_SYS_LIB) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(LIBQDMETADATA_32_SYMLINK) $(LIBQDMETADATA_64_SYMLINK)
+
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
 include $(CLEAR_VARS)

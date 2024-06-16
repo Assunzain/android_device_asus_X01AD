@@ -313,10 +313,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-# IPC router config
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
-
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
@@ -362,15 +358,9 @@ PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     libsfplugin_ccodec
 
-# Net
-PRODUCT_PACKAGES += \
-    libandroid_net \
-    netutils-wrapper-1.0
-
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
-
 
 # NeuralNetworks
 PRODUCT_PACKAGES += \
