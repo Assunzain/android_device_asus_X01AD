@@ -228,7 +228,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    android.frameworks.displayservice@1.0
+
+PRODUCT_PACKAGES += \
+   libavservices_minijail \
+   libavservices_minijail.vendor
 
 # Display Calibrators
 PRODUCT_COPY_FILES += \
