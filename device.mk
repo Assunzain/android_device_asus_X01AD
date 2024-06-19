@@ -184,13 +184,13 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl
 
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.common@1.0 \
     android.hardware.camera.device@3.4 \
     android.hardware.camera.provider@2.4-impl \
@@ -228,12 +228,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    android.frameworks.displayservice@1.0
-
-PRODUCT_PACKAGES += \
-   libavservices_minijail \
-   libavservices_minijail.vendor
+    android.hardware.memtrack@1.0-service
+    
 
 # Display Calibrators
 PRODUCT_COPY_FILES += \
