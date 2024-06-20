@@ -2528,8 +2528,7 @@ vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Radio - from daisy-user-10-QKQ1.191002.002-V11.0.10.0.QDLMIXM-release-keys
--product/app/datastatusnotification/datastatusnotification.apk|272156d88ac5a05f76fcea7f1a31087e1acbcd85
+# Radio - from daisy-user-10-QKQ1.191002.002-V11.0.10.0.QDLMIXM-release-keys 
 -product/app/embms/embms.apk|e364de916ae2dd9a69aee6a9766c3783457a6d75
 -product/app/QtiTelephonyService/QtiTelephonyService.apk|db60b6fe27b3033f6468b3170b23af18dd0bcdaf
 product/etc/permissions/embms.xml|5589ed8da213acd27e2ad2109094561eb1be30a7
