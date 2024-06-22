@@ -26,7 +26,7 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # RR
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
-RR_BUILDTYPE := Oppenheimer
+RR_BUILDTYPE := AssunZain
 BUILD_RR_WALLPAPERS := true
 TARGET_BOOT_ANIMATION_RES := 720
 #Face unlock flags
