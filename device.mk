@@ -133,11 +133,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libui_shim.vendor
 
-
-# vndservicemanager
-PRODUCT_PACKAGES += \
-    vndservicemanager
-
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -158,6 +153,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
+    libvolumelistener \
+    libaacwrapper \
     libvolumelistener \
     tinymix
 
@@ -194,6 +191,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libutilscallstack.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libgui_shim \
@@ -217,6 +218,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libdisplayconfig \
+    libdmabufheap.vendor \
     libqdMetaData.system \
     libtinyxml
 
@@ -281,6 +283,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti_recovery \
     vendor.lineage.health-service.default \
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjsoncpp.vendor \
+    libjson
 
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor
@@ -290,7 +296,23 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
+    android.hidl.allocator@1.0 \
+    android.hidl.allocator@1.0.vendor \
+    android.hidl.memory@1.0 \
+    android.hidl.memory@1.0.vendor \
+    libhidlmemory \
+    libhidlmemory.vendor \
     android.hidl.manager@1.0.vendor
+    
+PRODUCT_PACKAGES += \
+    android.media.audio.common.types-V2-cpp \
+    libjpeg.vendor \
+    libpng.vendor \
+    libyuv.vendor \
+    libprocessgroup.vendor \
+    libion.vendor \
+    libavservices_minijail \
+    libavservices_minijail.vendor
 
 PRODUCT_PACKAGES += \
     libhidltransport \
@@ -455,6 +477,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
+    libdumpstateutil.vendor \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -481,6 +504,12 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper_prd.xml \
     qti-telephony-utils-prd \
+    libsqlite.vendor \
+    libsysutils.vendor \
+    libcrypto_utils.vendor \
+    libssl.vendor \
+    libnetutils \
+    libnetutils.vendor \
     qti_telephony_utils_prd.xml
     
 
@@ -522,6 +551,9 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     wpa_supplicant \
     libwifi-hal-ctrl \
+    libcurl.vendor \
+    libwifi-hal \
+    libwifi-system-iface.vendor \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
