@@ -198,6 +198,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libgui_shim \
+    libexpat.vendor \
     libstdc++_vendor
     
  PRODUCT_PACKAGES += \
@@ -350,6 +351,11 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
+    libkeymaster4.vendor \
+    libkeymaster4support.vendor \
+    libkeymaster_portable.vendor \
+    libkeymaster_messages.vendor \
+    libpuresoftkeymasterdevice.vendor \
     android.hardware.keymaster@3.0.vendor
 
 # Lights
@@ -415,6 +421,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
+    libpower.vendor \
     vendor.qti.hardware.perf@2.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -442,6 +449,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.factory \
     fstab.qcom \
+    liblzma.vendor \
     fstab.qcom_ramdisk \
     init.device.rc \
     init.power.rc \
@@ -478,6 +486,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
     libdumpstateutil.vendor \
+    libunwindstack.vendor \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
