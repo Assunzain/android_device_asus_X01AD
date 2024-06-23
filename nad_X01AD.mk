@@ -24,11 +24,11 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 # Audio MOD
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
-# RR
-$(call inherit-product, vendor/rr/config/common_full_phone.mk)
-RR_BUILDTYPE := AssunZain
-BUILD_RR_WALLPAPERS := true
-TARGET_BOOT_ANIMATION_RES := 720
+# Inherit some common stuff.
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+TARGET_INCLUDE_WIFI_EXT := true
+NAD_BUILD_TYPE := UNOFFICIAL
+USE_PIXEL_CHARGING := true
 #Face unlock flags
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
@@ -37,7 +37,7 @@ FACE_UNLOCK_SUPPORTED := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Device identifiers.
-PRODUCT_NAME := rr_X01AD
+PRODUCT_NAME := nad_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
