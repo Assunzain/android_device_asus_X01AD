@@ -26,7 +26,6 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Inherit some common stuff.
 $(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
-TARGET_INCLUDE_WIFI_EXT := true
 NAD_BUILD_TYPE := UNOFFICIAL
 USE_PIXEL_CHARGING := true
 #Face unlock flags
