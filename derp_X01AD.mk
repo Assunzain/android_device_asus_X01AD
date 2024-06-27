@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
+# Audio MOD
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Inherit some common DerpFest OS stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 

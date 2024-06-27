@@ -29,6 +29,7 @@
 <audio_effects_conf version="2.0" xmlns="http://schemas.android.com/audio/audio_effects_conf/v2_0">
     <libraries>
         <library name="bundle" path="libbundlewrapper.so"/>
+        <library name="v4a_re" path="libv4a_re.so"/>
         <library name="reverb" path="libreverbwrapper.so"/>
         <library name="qcbassboost" path="libqcbassboost.so"/>
         <library name="qcvirt" path="libqcvirt.so"/>
@@ -82,6 +83,7 @@
         <effect name="dynamics_processing" library="dynamics_processing" uuid="e0e6539b-1781-7261-676f-6d7573696340"/>
         <effect name="aec" library="audio_pre_processing" uuid="0f8d0d2a-59e5-45fe-b6e4-248c8a799109"/>
         <effect name="ns" library="audio_pre_processing" uuid="1d97bb0b-9e2f-4403-9ae3-58c2554306f8"/>
+        <effect name="v4a_standard_re" library="v4a_re" uuid="90380da3-8536-4744-a6a3-5731970e640f"/>
     </effects>
     <preprocess>
         <stream type="voice_communication">
