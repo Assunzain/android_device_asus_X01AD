@@ -33,6 +33,8 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_BOOTLOADER_BOARD_NAME := SDM632
 TARGET_NO_BOOTLOADER := true
 
+BOARD_USES_METADATA_PARTITION := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
