@@ -24,6 +24,8 @@ $(call inherit-product, device/asus/X01AD/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Audio MOD
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
