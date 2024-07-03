@@ -26,5 +26,6 @@ cc_binary {
         "liblog",
         "libutils",
         "android.hardware.light@2.0",
+        "android.hardware.light-V1-ndk",
     ],
 }
