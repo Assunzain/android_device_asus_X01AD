@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libgui_shim \
+    libgui_shim:64 \
     libexpat.vendor \
     libstdc++_vendor
     

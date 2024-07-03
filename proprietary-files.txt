@@ -2572,7 +2572,7 @@ system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so|c6354e16b958c1b3cb4a59acb3be
 system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so|3dac05fad6a4ba527a33045364519a035f9d8b5f
 system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so|00ba5cd4acb1e1009cac039be628bfb5dd5bcf7d
 system_ext/lib64/lib-imscamera.so|8170256dbf9120ff05f193ba937c718d9c580881
-system_ext/lib64/lib-imsvideocodec.so|3e364441c9dce63d74fbc78c4781a84080513d8a
+system_ext/lib64/lib-imsvideocodec.so|16847df7bee00fead218a2b482b49bb38fdfb6c6
 system_ext/lib64/lib-imsvt.so|4f96cc5f27551d0b6cb11ad6447d9ce8829dde47
 system_ext/lib64/lib-imsvtextutils.so|1acf1de305e455a3a924483e5652b37133d10fd1
 system_ext/lib64/lib-imsvtutils.so|dfc5cf0854fe38c191a53ec3bd2a322d05d85567
