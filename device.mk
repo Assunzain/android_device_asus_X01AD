@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     libaacwrapper \
     libvolumelistener \
+    libtinycompress \
     libaudiopreprocessing \
     tinymix
 
