@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     libaacwrapper \
     libvolumelistener \
+    libaudiopreprocessing \
     tinymix
 
 PRODUCT_COPY_FILES += \
@@ -261,6 +262,8 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
+    libbinder.vendor \
+    libevent.vendor \
     libvndfwk_detect_jni.qti.vendor
 
 # Gatekeeper
@@ -518,7 +521,7 @@ PRODUCT_PACKAGES += \
     libsysutils.vendor \
     libcrypto_utils.vendor \
     libssl.vendor \
-    libnetutils \
+    libziparchive.vendor \
     libnetutils.vendor \
     qti_telephony_utils_prd.xml
     
