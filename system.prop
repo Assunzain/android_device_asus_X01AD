@@ -48,6 +48,12 @@ vendor.display.disable_skip_validate=1
 ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
+# Havoc-OS
+ro.havoc.device.name=Asus Zenfone Max M2
+ro.havoc.group.url=https://t.me/AssunZain
+ro.havoc.maintainer=AssunZain
+ro.havoc.maintainer.username=https://t.me/AssunZain
+
 #ro.hdmi.enable=true
 #
 # system props for the cne module
