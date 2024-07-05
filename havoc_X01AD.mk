@@ -27,6 +27,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common Havoc stuff.
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
+# Audio MOD
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
+
 HAVOC_BUILD_TYPE := UnOfficial
 HAVOC_MAINTAINER := AssunZain
 HAVOC_GROUP_URL := https://t.me/AssunZain
