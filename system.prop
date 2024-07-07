@@ -19,10 +19,10 @@ DEVICE_PROVISIONED=1
 #
 ro.telephony.default_network=22,22
 
-debug.sf.enable_hwc_vds=1
-debug.sf.hw=0
+debug.sf.hw=1
 debug.sf.latch_unsignaled=1
-debug.egl.hw=0
+debug.sdm.support_writeback=0
+debug.egl.hw=1
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
