@@ -33,7 +33,6 @@ persist.camera.is_mode=4
 persist.camera.stats.test=5
 camera.HAL3.enabled=1
 
-debug.sf.enable_hwc_vds=0
 debug.performance.tuning=1
 persist.hwc.mdpcomp.enable=true
 dalvik.vm.heapsize=36m
@@ -43,9 +42,11 @@ debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
 debug.sf.recomputecrop=0
 video.accelerate.hw=1
-debug.sdm.support_writeback=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_gl_backpressure=1
+debug.sdm.support_writeback=0
+debug.egl.hw=1
+debug.sf.hw=1
 
 # surface flinger 
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
