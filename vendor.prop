@@ -127,7 +127,6 @@ ro.vendor.extension_library=libqti-perfd-client.so
 persist.vendor.qcomsysd.enabled=1
 
 # Setup dalvik heapsize
-dalvik.vm.heapstartsize=8m
 dalvik.vm.heapgrowthlimit=192m
 dalvik.vm.heapsize=512m
 dalvik.vm.heaptargetutilization=0.75
