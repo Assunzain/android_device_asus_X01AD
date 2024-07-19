@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common banana stuff
+$(call inherit-product, vendor/banana/config/common.mk)
 
 # Audio MOD
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
@@ -37,14 +37,17 @@ TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
 
-# AlphaDroid
-ALPHA_BUILD_TYPE := UNOFFICIAL
-ALPHA_MAINTAINER := AssunZain
 WITH_GAPPS := false
-TARGET_SUPPORTS_QUICK_TAP := true
+BUILD_CORE_GAPPS := false
+BUILD_CORE_GAPPS_EXTRA := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGER_SUPPORTS_NEXT_GEN_ASSISTANT := false
+BANANA_MAINTAINER := AssunZain
+TARGET_ENABLE_BLUR := true
+TARGET_BUILD_APERTURE_CAMERA := true
 
 # Device identifiers.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := banana_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
