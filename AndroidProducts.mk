@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/banana_X01AD.mk
+    $(LOCAL_DIR)/lineage_X01AD.mk
 
 COMMON_LUNCH_CHOICES := \
-    banana_X01AD-user \
-    banana_X01AD-userdebug \
-    banana_X01AD-eng
+    lineage_X01AD-user \
+    lineage_X01AD-userdebug \
+    lineage_X01AD-eng
