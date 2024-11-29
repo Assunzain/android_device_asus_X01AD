@@ -32,7 +32,7 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Derp
-DERP_BUILDTYPE := UNOFFICIAL
+DERP_BUILDTYPE := Unofficial
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
@@ -54,8 +54,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=X01A_1 \
     PRODUCT_NAME=X01A_1
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="cheetah-user 13 TQ3A.230705.001.A1 10217028 release-keys"
+BUILD_FINGERPRINT := "asus/WW_X01AD/ASUS_X01A_1:10/WW_Phone-202005071625/17.2018.2004.31-20200507:user/release-keys"
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := google/cheetah/cheetah:13/TQ3A.230805.001/10316531:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="msm8953_64-user 10 WW_Phone-202005071625 17.2018.2004.31-20200507 release-keys"
