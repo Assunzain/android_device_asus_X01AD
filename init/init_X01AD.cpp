@@ -118,7 +118,8 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
     property_override("ro.rising.chipset", "Snapdragon™ 632");
     // Set bluetooth name
-    property_override("bluetooth.device.default_name", "Zenfone Max M2");
+    property_override("bluetooth.device.default_name", "Asus Zenfone Max M2");
     // SafetyNet workaround
     property_override("ro.boot.verifiedbootstate", "green");
+    property_override("ro.oem_unlock_supported", "0");
 }
