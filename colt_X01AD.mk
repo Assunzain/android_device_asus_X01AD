@@ -22,8 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/colt/config/common_full_phone.mk)
 
 # Audio MOD
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
@@ -36,15 +35,12 @@ TARGET_BOOT_ANIMATION_RES := 720
 TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 FACE_UNLOCK_SUPPORTED := true
-RISING_CHIPSET := Snapdragon632
-RISING_BUILDTYPE := UNOFFICIAL
-RISING_MAINTAINER := Assunzain
-WITH_GMS := true
-TARGET_USE_GOOGLE_TELEPHONY := true
-TARGET_CORE_GMS := true
+COLT_BUILD_MAINTAINER := Zain
+WITH_GAPPS := true
+
 
 # Device identifiers.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := colt_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
