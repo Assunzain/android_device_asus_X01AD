@@ -39,8 +39,6 @@ TARGET_NO_BOOTLOADER := true
 # Fix allow missing dep
 ALLOW_MISSING_DEPENDENCIES := true
 
-BOARD_USES_METADATA_PARTITION := true
-
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
